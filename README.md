@@ -93,7 +93,7 @@ When you run `cbrgm/multiple-codeowners-action` on this repository (assuming the
 ## Inputs
 
 - `output`: Optional - Path where the combined CODEOWNERS file will be written, relative to the repository root. Defaults to `.github/CODEOWNERS`.
-- `repository`: Optional - Path to the repository root, if different from the default GitHub Actions workspace. Defaults to `.` (the root of the repository).
+- `path`: Optional - Path to the repository root, if different from the default GitHub Actions workspace. Defaults to `.` (the root of the repository).
 - `dry-run`: Optional - Perform a dry run without actually writing the combined CODEOWNERS file. Defaults to `false`, meaning the combined CODEOWNERS file will be written by default.
 
 ## Example Workflow
@@ -120,8 +120,7 @@ jobs:
     - name: Combine CODEOWNERS Files
       uses: cbrgm/multiple-codeowners-action@v1
       with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        repository: ${{ github.repository }}
+        path: ${{ github.repository }}
         output: '.github/CODEOWNERS'
 
     - name: Create Pull Request

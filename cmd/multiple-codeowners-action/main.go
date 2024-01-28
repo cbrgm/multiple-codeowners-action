@@ -36,7 +36,7 @@ const (
 
 // args holds the command-line arguments.
 var args struct {
-	RepoPath string `arg:"--repository,env:REPO_PATH" default:"."`           // Path to the repository root.
+	RepoPath string `arg:"--path,env:REPO_PATH" default:"."`                 // Path to the repository root.
 	Output   string `arg:"--output,env:OUTPUT" default:".github/CODEOWNERS"` // Path for the output CODEOWNERS file.
 	DryRun   bool   `arg:"--dry-run,env:DRY_RUN"`                            // Flag to enable dry run mode.
 }
