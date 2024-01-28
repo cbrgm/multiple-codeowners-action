@@ -1,0 +1,31 @@
+name: Update Combined CODEOWNERS
+
+on:
+  workflow_dispatch:
+
+jobs:
+  update-codeowners:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0 # Necessary for the create-pull-request action
+
+    - name: Combine CODEOWNERS Files
+      uses: cbrgm/multiple-codeowners-action@main
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        repository: ${{ github.repository }}
+        output: '.github/CODEOWNERS'
+
+    - name: Create Pull Request
+      uses: peter-evans/create-pull-request@v5
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        branch: update-codeowners-${{ github.run_number }}
+        commit-message: Update combined CODEOWNERS file
+        title: "Update Combined CODEOWNERS"
+        body: "This PR updates the combined CODEOWNERS file."
+        draft: false
+
