@@ -23,7 +23,7 @@ runs:
     - --output
     - ${{ inputs.output }}
     - --path
-    - ${{ inputs.repository }}
+    - ${{ inputs.path }}
     - --dry-run=${{ inputs.dry-run }}
 
 branding:
