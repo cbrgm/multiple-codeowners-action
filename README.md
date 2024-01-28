@@ -120,7 +120,6 @@ jobs:
     - name: Combine CODEOWNERS Files
       uses: cbrgm/multiple-codeowners-action@v1
       with:
-        path: ${{ github.repository }}
         output: '.github/CODEOWNERS'
 
     - name: Create Pull Request
