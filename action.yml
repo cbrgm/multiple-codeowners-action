@@ -7,7 +7,7 @@ inputs:
     description: 'Path where the combined CODEOWNERS file will be written, relative to the repository root'
     required: false
     default: '.github/CODEOWNERS'
-  repository:
+  path:
     description: 'Path to the repository root, if different from the default GitHub Actions workspace'
     required: false
     default: '.'
@@ -22,7 +22,7 @@ runs:
   args:
     - --output
     - ${{ inputs.output }}
-    - --repository
+    - --path
     - ${{ inputs.repository }}
     - --dry-run=${{ inputs.dry-run }}
 
