@@ -3,7 +3,7 @@ module github.com/cbrgm/multiple-codeowners-action
 go 1.22.2
 
 require (
-	github.com/alexflint/go-arg v1.6.0
+	github.com/alexflint/go-arg v1.6.1
 	github.com/denormal/go-gitignore v0.0.0-20180930084346-ae8ad1d07817
 	github.com/stretchr/testify v1.11.1
 )
