@@ -13,7 +13,7 @@ jobs:
         fetch-depth: 0 # Necessary for the create-pull-request action
 
     - name: Combine CODEOWNERS Files
-      uses: cbrgm/multiple-codeowners-action@main
+      uses: cbrgm/multiple-codeowners-action@96961490bdb35538b272600ac974bc744cf985e1 # main
       with:
         output: '.github/CODEOWNERS'
 
