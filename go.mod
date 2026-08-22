@@ -5,11 +5,11 @@ go 1.26.5
 require (
 	github.com/alexflint/go-arg v1.6.1
 	github.com/denormal/go-gitignore v0.0.0-20180930084346-ae8ad1d07817
-	github.com/stretchr/testify v1.12.0
+	github.com/stretchr/testify v1.12.1
 )
 
 require (
 	github.com/alexflint/go-scalar v1.2.0 // indirect
 	github.com/danwakefield/fnmatch v0.0.0-20160403171240-cbb64ac3d964 // indirect
-	gopkg.in/yaml.v3 v3.0.1 // indirect
+	go.yaml.in/yaml/v3 v3.0.5 // indirect
 )
